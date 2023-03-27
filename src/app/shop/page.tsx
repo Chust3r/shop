@@ -6,11 +6,11 @@ import MainSlider from '@/components/ui/mainSlider'
 
 // → Interfaces
 
-import { APIResponse } from '@/types/types'
+import { APIResponseProducts } from '@/types/types'
 
 
-const getProducts = async (): Promise<APIResponse> => {
-	const res = await fetch('https://fakestoreapi.com/products?limit=3', {
+const getProducts = async (): Promise<APIResponseProducts> => {
+	const res = await fetch('https://fakestoreapi.com/products?limit=5', {
 		next: { revalidate: 60 * 60 * 24 },
 	})
 

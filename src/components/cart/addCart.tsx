@@ -16,7 +16,7 @@ import useStoreCart from '@/store/storeCart'
 
 const addCart = ({ product }: { product: Product }) => {
 
-    const { addProduct, products } = useStoreCart(state => state)
+    const addProduct = useStoreCart(state => state.addProduct)
 
     const onClick = () => {
         addProduct(product)
