@@ -29,15 +29,13 @@ const ProductInfo = ({ product }: { product: Product }) => {
 
 
 		<section className='w-full h-full flex flex-col gap-2 px-4 lg:px-16 py-8'>
-			<h1 className='text-3xl text-slate-700'>{product.title}</h1>
-			<h2 className='text-lg font-medium text-slate-700 '>${product.price}</h2>
+			<h1 className='text-2xl text-slate-900 font-semibold'>{product.title}</h1>
+			<h2 className='text-xl text-gray-700 font-bold '>${product.price}</h2>
 
 
 
-			<p className="font-medium">Description</p>
+			<p className="font-medium">Features</p>
 			<p>{product.description}</p>
-			<span className='capitalize italic font-medium'>{product.category}</span>
-
 			<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit doloremque totam numquam reprehenderit vel. Voluptate nobis voluptatem, aliquam reprehenderit dolorum ut fugit magni labore earum quod quia quis! Perspiciatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi nobis non facere deleniti necessitatibus debitis cum sint soluta eius! Optio autem vitae ipsa magni, eos a impedit. Reiciendis, facere quidem</div>
 
 			<AddCart product={product} />

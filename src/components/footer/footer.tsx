@@ -20,7 +20,7 @@ const Footer = () => {
 								placeholder="micorreo@example.com"
 							/>
 
-							<button className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-white bg-gradient-to-r from-rose-400 to-rose-500">
+							<button className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-white bg-gradient-to-r from-primary to-secondary">
 								Notifícame
 							</button>
 						</div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // → Project Imports 
 import CartIcon from '../icons/cartIcon'
@@ -16,24 +16,42 @@ import useStoreCart from '@/store/storeCart'
 
 const addCart = ({ product }: { product: Product }) => {
 
-    const addProduct = useStoreCart(state => state.addProduct)
+    const { addProduct, products } = useStoreCart(state => state)
+
+    const [isInCart, setIsInCart] = useState(false)
 
     const onClick = () => {
         addProduct(product)
+        setIsInCart(true)
     }
+
+    useEffect(() => {
+        setIsInCart(products.some(item => item.id === product.id))
+    }, [])
 
 
     return (
         <>
-            <button className='bg-gradient-to-r from-rose-400 to-rose-500 uppercase font-medium text-sm text-white py-1.5 px-3 
-            rounded-lg flex all-center gap-3 self-center'
+            <button className='bg-gradient-to-r from-primary to-secondary font-medium text-sm text-acent py-1.5 px-3 rounded-lg flex all-center gap-3 self-center my-2'
                 onClick={onClick}
             >
-                <span>
+                {!isInCart
+                    ?
+                    <> 
+                        <span>
                     <CartIcon className='w-4 h-4 stroke-2' />
-                </span>
-                <span>Agregar al carrito</span>
+                        </span>
+                        <span>Buy now</span>
+                    </>
+                    :
+                    <>
+                        <span>Pay now</span>
+                    </>
+
+                }
             </button>
+
+
 
         </>
     )
