@@ -9,18 +9,18 @@ const Footer = () => {
 		<footer aria-label="Site Footer" className="w-full bg-white ">
 			<div className="container mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 text-slate-700">
 				<div className="mx-auto max-w-md">
-					<strong className="block text-center text-xl font-bold text-gray-900 sm:text-3xl">
+					<strong className="block text-center text-xl font-bold sm:text-3xl">
 						¿Quieres recibir información sobre lo más nuevo?
 					</strong>
 
 					<form className="mt-6" autoComplete="off">
 						<div className="relative max-w-lg">
 							<input
-								className="w-full rounded-full border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium transition focus:outline-rose-400"
+								className="w-full rounded-full bg-complementary p-4 pr-32 text-sm font-medium transition focus:outline-primary"
 								placeholder="micorreo@example.com"
 							/>
 
-							<button className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-white bg-gradient-to-r from-primary to-secondary">
+							<button className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-acent bg-gradient-to-r from-primary to-secondary">
 								Notifícame
 							</button>
 						</div>
@@ -38,16 +38,16 @@ const Footer = () => {
 						</p>
 
 						<div className="mt-6 flex justify-center gap-4 lg:justify-start">
-							<FacebookIcon className="w-6 h-6 text-gray-700 transition hover:text-rose-500 cursor-pointer" />
-							<InstagramIcon className="w-6 h-6 text-gray-700 transition hover:text-rose-500 cursor-pointer" />
-							<TwitterIcon className="w-6 h-6 text-gray-700 transition hover:text-rose-500 cursor-pointer" />
-							<YoutubeIcon className="w-6 h-6 text-gray-700 transition hover:text-rose-500 cursor-pointer" />
+							<FacebookIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
+							<InstagramIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
+							<TwitterIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
+							<YoutubeIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
 						</div>
 					</div>
 
 					<div className="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left">
 						<div>
-							<strong className="font-medium text-gray-900">
+							<strong className="font-medium">
 								Services
 							</strong>
 
@@ -56,25 +56,25 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Marketing
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Graphic Design
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									App Development
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Web Development
@@ -83,7 +83,7 @@ const Footer = () => {
 						</div>
 
 						<div>
-							<strong className="font-medium text-gray-900">
+							<strong className="font-medium">
 								About
 							</strong>
 
@@ -92,25 +92,25 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									About
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Careers
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									History
 								</a>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Our Team
@@ -119,7 +119,7 @@ const Footer = () => {
 						</div>
 
 						<div>
-							<strong className="font-medium text-gray-900">
+							<strong className="font-medium">
 								Support
 							</strong>
 
@@ -128,21 +128,21 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									FAQs
 								</a>
 
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Contact
 								</a>
 
 								<a
-									className="text-gray-700 transition hover:text-rose-500"
+									className="text-contrast transition hover:text-secondary"
 									href="/"
 								>
 									Live Chat
@@ -152,8 +152,8 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="mt-16 border-t border-gray-100 pt-8">
-					<div className="text-center text-xs leading-relaxed text-gray-500">
+				<div className="mt-16 border-t border-complementary pt-8">
+					<div className="text-center text-xs leading-relaxed text-contrast">
 						<span>© Company 2023. All rights reserved.</span>
 						<br />
 						<p className="flex items-center justify-center gap-2">

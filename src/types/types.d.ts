@@ -7,14 +7,16 @@ interface Product {
 	image: string
 }
 
-interface IconProps {
-	className: string
-}
-
 interface APIResponseProducts {
 	error: boolean
 	data: Array<Product>
 }
+
+interface IconProps {
+	className: string
+}
+
+
 
 interface APIResponseProduct {
 	data: Product

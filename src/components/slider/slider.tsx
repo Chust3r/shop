@@ -1,7 +1,7 @@
 'use client'
 
 import '@splidejs/splide/dist/css/splide.min.css'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { Splide, SplideSlide, Options } from '@splidejs/react-splide'
 import { Children } from 'react';
 
 
@@ -12,32 +12,29 @@ interface SliderProps {
 		pagination?: boolean
 		arrows?: boolean
 	}
-	perPage?: number
+	type?: "slide" | "loop" | "fade"
 	children: React.ReactNode
 }
 
-const Slider: React.FC<SliderProps> = ({ children, controls: { pagination = false, arrows = false }, perPage = 1 }) => {
+const Slider: React.FC<SliderProps> = ({ children, controls: { pagination = false, arrows = false }, type = "slide" }) => {
 	const Elements = Children.toArray(children)
 
 	// Config Slider
 
-	const config = {
-		options: {
+	const options: Options = {
 			autoplay: true,
-			type: Elements.length === 1 ? 'slide' : 'loop',
+		type: type,
 			rewind: Elements.length > 1,
 			rewindSpeed: 300,
 			arrows: Elements.length === 1 ? false : arrows,
 			pagination: pagination,
 			lazyLoad: true,
-			perMove: 1,
-			perPage,
-			speed: 1200
-		},
+		perMove: 1,
+		speed: 1200
 	}
 
 	return (
-		<Splide {...config} className="w-full 2xl:container 2xl:mx-auto" >
+		<Splide options={options} className="w-full">
 			{Elements.map((el, i) => (
 				<SplideSlide key={i}>{el}</SplideSlide>
 			))}

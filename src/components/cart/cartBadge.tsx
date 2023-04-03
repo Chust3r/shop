@@ -37,7 +37,7 @@ const cartBadge = () => {
 
     return (
         <div className='relative'>
-            <CartIcon className='w-6 h-6 ' />
+            <CartIcon className='w-6 h-6 stroke-contrast' />
             {itemsInBag.length > 0 && <span className='absolute -bottom-2 -right-2 w-5 h-5 bg-gradient-to-tr from-primary to-secondary flex justify-center items-center rounded-full text-[10px] font-medium text-acent'>
                 {itemsInBag.length}
             </span>}

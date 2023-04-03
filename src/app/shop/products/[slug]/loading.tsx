@@ -1,8 +1,10 @@
-import Loader from "@/components/ui/loader"
+
+
+import ProductInfoLoader from "@/components/products/productInfoLoader"
 
 const Loading = () => {
     return (
-        <Loader />
+        <ProductInfoLoader />
     )
 }
 

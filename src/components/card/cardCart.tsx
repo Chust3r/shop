@@ -7,17 +7,18 @@ import Image from 'next/image';
 
 const cardCart = ({ title, image, price, amount }: ProductCart) => {
     return (
-        <div className='flex gap-16 p-2 items-center'>
-            <figure className='relative w-20 h-20 rounded overflow-hidden bg-acent'>
-                <Image src={image} alt={title} fill className='object-scale-down object-center p-2' />
-            </figure>
-            <div className="flex-1">
-                <h2 className='font-medium text-contrast'>{title}</h2>
+        <>
+            <div className="col-span-3 flex gap-4 items-center">
+                <figure className='w-20 h-20 relative rounded bg-gray-50'>
+                    <Image src={image} fill alt={title} className="object-scale-down object-center p-1.5" />
+                </figure>
+                <h3 className='font-medium text-contrast flex-1 text-sm md:text-base'>{title}</h3>
             </div>
-            <div>
-                <span className='font-medium text-contrast pr-2'>${price}</span>
+            <div className='col-span-1 flex items-center justify-end'>
+                <span className='font-medium text-contrast'>${price.toFixed(2)}</span>
             </div>
-        </div>
+
+        </>
     )
 }
 

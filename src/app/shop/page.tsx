@@ -2,6 +2,7 @@
 
 import ProductList from '@/components/products/productList'
 import MainSlider from '@/components/ui/mainSlider'
+import Hero from '@/components/heros/hero'
 
 
 // → Interfaces
@@ -22,14 +23,12 @@ const getProducts = async (): Promise<APIResponseProducts> => {
 const page = async (): Promise<JSX.Element> => {
 	const data = await getProducts()
 
-
 	return (
 		<>
 			<MainSlider />
-			<div className="min-h-fit max-h-max px-14 sm:px-16 md:px-20 lg:px-24">
-				<h1 className='text-2xl pt-8 text-slate-700'>Selección de la casa</h1>
-				<ProductList products={data.data} />
-			</div>
+			<h1 className='px-4 text-3xl font-semibold pt-8 text-contrast'>Selección de la casa</h1>
+			<ProductList products={data.data} />
+			<Hero img='/../public/banner5.jpg' text='Colección 2023' />
 		</>
 	)
 }

@@ -13,7 +13,7 @@ export default function RootLayout({
 	}): JSX.Element {
 	return (
 		<html lang="en">
-			<body className="flex flex-col min-h-screen bg-relive divide-y-[1px] divide-complementary">
+			<body className="flex flex-col min-h-screen bg-white divide-y-[1px] divide-complementary container mx-auto">
 				<main className="flex-1">{children}</main>
 				<Footer />
 			</body>
