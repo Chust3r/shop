@@ -18,10 +18,8 @@ const productsCart = ({ products }: { products: Array<ProductCart> }) => {
                 <p className='text-sm font-medium text-contrast/90'>{products.length} items in cart</p>
 
             </div>
-
-
+            
             {products.map(product => <CardCart {...product} key={product.title} />)}
-
 
         </div>
 

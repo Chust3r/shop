@@ -24,12 +24,11 @@ const page = async (): Promise<JSX.Element> => {
 	const data = await getProducts()
 
 	return (
-		<>
+		<div className='flex flex-col gap-4'>
 			<MainSlider />
-			<h1 className='px-4 text-3xl font-semibold pt-8 text-contrast'>Selección de la casa</h1>
-			<ProductList products={data.data} />
-			<Hero img='/../public/banner5.jpg' text='Colección 2023' />
-		</>
+			<Hero img='banner5.jpg' text="Clothe's men" />
+			<Hero img='jewerly.jpg' text='Jewerly' />
+		</div>
 	)
 }
 
