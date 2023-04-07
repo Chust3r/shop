@@ -8,7 +8,7 @@ import AddCart from '../cart/addCart'
 import { Product } from '@/types/types'
 
 
-const ProductInfo = ({ product }: { product: Product }) => {
+const ProductOverview = ({ product }: { product: Product }) => {
 
 
 	return <div className="max-h-max flex flex-col md:grid md:grid-cols-2 text-contrast">
@@ -49,4 +49,4 @@ const ProductInfo = ({ product }: { product: Product }) => {
 	</div>
 }
 
-export default ProductInfo
+export default ProductOverview

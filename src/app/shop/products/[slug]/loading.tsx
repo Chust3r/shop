@@ -1,6 +1,6 @@
 
 
-import ProductInfoLoader from "@/components/products/productInfoLoader"
+import ProductInfoLoader from "@/components/products/productLoader"
 
 const Loading = () => {
     return (

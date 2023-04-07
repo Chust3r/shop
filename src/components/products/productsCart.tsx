@@ -11,16 +11,19 @@ import { ProductCart } from '@/types/types'
 const productsCart = ({ products }: { products: Array<ProductCart> }) => {
     return (
 
-        <div className='grid grid-cols-4 gap-4'>
-            <div className='col-span-3'>
-                <p className='text-2xl font-medium text-contrast/90'>Your cart</p>
-            </div>
-            <div className='col-span-1 place-self-end'>
-                <p className='text-sm font-medium text-contrast/90'>{products.length} items in cart</p>
-            </div>
-            {products.map(product => <CardCart {...product} key={product.title} />)}
-        </div>
+        <div className='min-h-[24rem]'>
+            <div className='flex justify-between mb-8'>
 
+                <p className='text-2xl font-medium text-contrast/90'>Your cart</p>
+                <p className='text-sm font-medium text-contrast/90'>{products.length} items in cart</p>
+
+            </div>
+
+
+            {products.map(product => <CardCart {...product} key={product.title} />)}
+
+
+        </div>
 
     )
 }

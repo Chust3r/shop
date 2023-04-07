@@ -1,6 +1,6 @@
 import React from 'react'
 
-const productInfoLoader = () => {
+const productLoader = () => {
     return (
         <div className="max-h-max flex flex-col md:grid md:grid-cols-2">
 
@@ -33,4 +33,4 @@ const productInfoLoader = () => {
     )
 }
 
-export default productInfoLoader
+export default productLoader

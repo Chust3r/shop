@@ -1,4 +1,5 @@
 import NavbarCart from '@/components/navbar/navbarCart'
+import Breadcrumbs from '../../components/ui/breadcrumbs';
 
 const shopLayout = ({
 	children,
@@ -8,6 +9,7 @@ const shopLayout = ({
 	return (
 		<>
 			<NavbarCart />
+			<Breadcrumbs/>
 			<section >
 				{children}
 			</section>

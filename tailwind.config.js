@@ -8,13 +8,16 @@ module.exports = {
 
 	theme: {
 		colors: {
-			primary: '#0ea5e9',
-			secondary: '#6366f1',
+			primary: '#89f7fe',
+			secondary: '#66a6ff',
 			contrast: '#374151',
 			complementary: '#f3f4f6',
 			acent: colors.white,
 			relive: '#f8fafc',
 			...colors,
+		},
+		fontFamily: {
+			sans: "'Maven Pro', sans-serif",
 		},
 	},
 	plugins: [],
