@@ -8,8 +8,8 @@ module.exports = {
 
 	theme: {
 		colors: {
-			primary: '#89f7fe',
-			secondary: '#66a6ff',
+			primary: '#2563eb',
+			secondary: '#4338ca',
 			contrast: '#374151',
 			complementary: '#f3f4f6',
 			acent: colors.white,

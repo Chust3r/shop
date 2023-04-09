@@ -6,17 +6,20 @@ import CartBadge from '../cart/cartBadge';
 
 function NavbarCart() {
 	return (
-		<header className="w-full bg-acent/30  sticky top-0 z-10 backdrop-blur-sm">
+		<header className="w-full bg-acent/0  sticky top-0 z-10 backdrop-blur-sm">
 			<nav className="container mx-auto all-center w-full h-20 flex px-4">
 				<div className="flex-1">
+					<div className='w-fit'>
 					<Link href="shop">
 						<Image
 							src={logo}
 							alt="Marieta Linda"
 							width={70}
 							height={70}
+
 						/>
-					</Link>
+						</Link>
+					</div>
 				</div>
 				<Link className="relative m-1" href="shop/cart">
 					<CartBadge />

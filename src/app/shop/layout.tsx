@@ -9,7 +9,7 @@ const shopLayout = ({
 	return (
 		<>
 			<NavbarCart />
-			<Breadcrumbs/>
+			{/* <Breadcrumbs/> */}
 			<section >
 				{children}
 			</section>

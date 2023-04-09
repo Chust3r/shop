@@ -32,7 +32,7 @@ const addCart = ({ product }: { product: Product }) => {
 
     return (
         <>
-            <button className='bg-gradient-to-r from-primary to-secondary font-medium text-sm text-acent py-1.5 px-3 rounded-lg flex all-center gap-3 self-center my-2'
+            <button className='bg-gradient-to-r from-primary to-secondary font-medium text-sm text-acent py-3 px-5 rounded-full flex all-center gap-3 self-center my-2'
                 onClick={onClick}
             >
                 {!isInCart
@@ -41,11 +41,11 @@ const addCart = ({ product }: { product: Product }) => {
                         <span>
                     <CartIcon className='w-4 h-4 stroke-2' />
                         </span>
-                        <span>Buy now</span>
+                        <span>Agregar al carrito</span>
                     </>
                     :
                     <>
-                        <span>Pay now</span>
+                        <span>Pagar ahora</span>
                     </>
 
                 }

@@ -22,7 +22,7 @@ const Card = (props: Product) => {
 					<h3 className="text-sm text-left font-semibold truncate text-contrast">
 						{props.title}
 					</h3>
-					<p className="tracking-wide font-semibold text-contrast">
+					<p className="tracking-wide font-semibold text-contrast text-contrast/90">
 						${props.price.toFixed(2)}
 					</p>
 				</div>
