@@ -5,10 +5,9 @@ import Link from "next/link"
 
 interface Hero {
     text?: string
-    img: string
+    img: any
     href: string
 }
-
 
 const hero = (props: Hero): JSX.Element => {
 

@@ -15,9 +15,7 @@ const page = (): JSX.Element => {
 			<div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 				<Hero img='banner5.jpg' text="Ropa de Hombre" href="shop/products?category=men's clothing" />
 				<Hero img='jewelery.jpg' text='Joyeria' href='shop/products?category=jewelery' />
-				<div className='col-span-2'>
-					<Hero img='women.jpg' text='Ropa de Mujer' href="shop/products?category=women's clothing" />
-				</div>
+				<Hero img='women.jpg' text='Ropa de Mujer' href="shop/products?category=women's clothing" />
 			</div>
 		</div>
 	)

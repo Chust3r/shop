@@ -6,10 +6,11 @@ import Search from "@/components/search/search"
 // → Interfaces
 
 import { APIResponseProducts } from "@/types/types"
+import process from "process"
 
 interface PageProps {
     searchParams: {
-        category: string | undefined
+        category: string
     }
 }
 
@@ -17,9 +18,9 @@ interface PageProps {
 // → Data fetching
 
 
-const getData = async (category: string | undefined): Promise<APIResponseProducts> => {
+const getData = async (category: string): Promise<APIResponseProducts> => {
 
-    const res = category !== undefined ? await fetch(`https://fakestoreapi.com/products/category/${category}`) : await fetch(`https://fakestoreapi.com/products`)
+    const res = await fetch(`${process.env.API}/category/${category}`)
 
     const data = await res.json()
 
@@ -37,7 +38,7 @@ const page = async ({ searchParams }: PageProps): Promise<JSX.Element> => {
 
     return (
         <>
-            <Search />
+            <Search searchParams={searchParams} />
             <ProductList products={data.data} /></>
     )
 }
