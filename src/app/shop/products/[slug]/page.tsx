@@ -16,7 +16,7 @@ interface PageProps {
 // → Data Fetching
 
 const getProduct = async (id: number): Promise<APIResponseProduct> => {
-    const res = await fetch(`${process.env.API}${id}`)
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`)
     const data = await res.json()
     return {
         data: data,

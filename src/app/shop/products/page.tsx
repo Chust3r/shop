@@ -19,7 +19,7 @@ interface PageProps {
 
 const getData = async (category: string | undefined): Promise<APIResponseProducts> => {
 
-    const res = category !== undefined ? await fetch(`${process.env.API}/category/${category}`) : await fetch(`${process.env.API}`)
+    const res = category !== undefined ? await fetch(`https://fakestoreapi.com/products/category/${category}`) : await fetch(`https://fakestoreapi.com/products`)
 
     const data = await res.json()
 
