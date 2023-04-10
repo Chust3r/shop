@@ -9,7 +9,7 @@ import { APIResponseProducts } from "@/types/types"
 
 interface PageProps {
     searchParams: {
-        category?: string 
+        category: string | undefined
     }
 }
 
@@ -17,7 +17,7 @@ interface PageProps {
 // → Data fetching
 
 
-const getData = async (category?: string): Promise<APIResponseProducts> => {
+const getData = async (category: string | undefined): Promise<APIResponseProducts> => {
 
     const res = category !== undefined ? await fetch(`${process.env.API}/category/${category}`) : await fetch(`${process.env.API}`)
 

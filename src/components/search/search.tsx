@@ -21,8 +21,8 @@ const search = () => {
             </div>
 
             <div className="py-5 px-5 flex gap-5 flex-wrap">
-                {categories.map(category => <Link href={`shop/products?category=${category}`}>
-                    <span className="w-fit px-3 py-1.5 text-sm capitalize bg-complementary rounded-full cursor-pointer" key={category}>{category}</span></Link>)}
+                {categories.map(category => <Link href={`shop/products?category=${category}`} key={category}>
+                    <span className="w-fit px-3 py-1.5 text-sm capitalize bg-complementary rounded-full cursor-pointer">{category}</span></Link>)}
             </div>
         </>
     )
