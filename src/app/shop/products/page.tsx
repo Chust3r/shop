@@ -1,4 +1,7 @@
+// → Project Imports
+
 import ProductList from "@/components/products/productList"
+import Search from "@/components/search/search"
 
 // → Interfaces
 
@@ -16,7 +19,7 @@ interface PageProps {
 
 const getData = async (category?: string): Promise<APIResponseProducts> => {
 
-    const res = category !== undefined ? await fetch(`https://fakestoreapi.com/products/category/${category}`) : await fetch(`https://fakestoreapi.com/products/`)
+    const res = category !== undefined ? await fetch(`${process.env.API}/category/${category}`) : await fetch(`${process.env.API}`)
 
     const data = await res.json()
 
@@ -33,7 +36,9 @@ const page = async ({ searchParams }: PageProps): Promise<JSX.Element> => {
     const data = await getData(searchParams.category)
 
     return (
-        <ProductList products={data.data} />
+        <>
+            <Search />
+            <ProductList products={data.data} /></>
     )
 }
 

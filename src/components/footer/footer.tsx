@@ -38,10 +38,10 @@ const Footer = () => {
 						</p>
 
 						<div className="mt-6 flex justify-center gap-4 lg:justify-start">
-							<FacebookIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
-							<InstagramIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
-							<TwitterIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
-							<YoutubeIcon className="w-6 h-6 text-contrast transition hover:text-secondary cursor-pointer" />
+							<FacebookIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<InstagramIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<TwitterIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<YoutubeIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
 						</div>
 					</div>
 
@@ -56,25 +56,25 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Marketing
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Graphic Design
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									App Development
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Web Development
@@ -92,25 +92,25 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									About
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Careers
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									History
 								</a>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Our Team
@@ -128,21 +128,21 @@ const Footer = () => {
 								className="mt-6 flex flex-col space-y-1"
 							>
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									FAQs
 								</a>
 
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Contact
 								</a>
 
 								<a
-									className="text-contrast transition hover:text-secondary"
+									className="text-contrast transition hover:text-primary"
 									href="/"
 								>
 									Live Chat

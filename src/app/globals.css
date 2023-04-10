@@ -6,4 +6,8 @@
     .all-center{
         @apply flex justify-center items-center;
     }
+
+    *:focus{
+        @apply outline-primary;
+    }
 }

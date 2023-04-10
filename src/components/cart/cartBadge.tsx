@@ -1,7 +1,13 @@
 "use client"
 
-import CartIcon from '../icons/cartIcon'
 import { useEffect } from 'react'
+
+import CartIcon from '../icons/cartIcon'
+
+
+// → Interfaces
+
+import { ProductCart } from '@/types/types'
 
 // → Store
 
@@ -10,7 +16,9 @@ import useStoreCart from '@/store/storeCart'
 // → Storage 
 
 import useStorage from '@/hooks/useStorage'
-import { ProductCart } from '@/types/types'
+
+
+
 
 
 const cartBadge = () => {

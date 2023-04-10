@@ -1,6 +1,6 @@
 // → Project imports
 
-import ProductInfo from '@/components/products/productOverview';
+import ProductOverview from '@/components/products/productOverview';
 
 //→ Interfaces
 
@@ -16,7 +16,7 @@ interface PageProps {
 // → Data Fetching
 
 const getProduct = async (id: number): Promise<APIResponseProduct> => {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`)
+    const res = await fetch(`${process.env.API}${id}`)
     const data = await res.json()
     return {
         data: data,
@@ -32,7 +32,7 @@ const productPage = async ({ params: { slug } }: PageProps): Promise<JSX.Element
 
 
     return (
-        <ProductInfo product={data} />
+        <ProductOverview product={data} />
     )
 }
 

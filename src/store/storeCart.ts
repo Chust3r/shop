@@ -8,6 +8,7 @@ interface ProductState {
 	products: Array<ProductCart>
 	addProduct: (product: Product) => void
 	refreshProducts: (products: Array<ProductCart>) => void
+	removeProduct: (id: number) => void
 }
 
 const useStoreCart = create<ProductState>((set) => ({
@@ -48,6 +49,17 @@ const useStoreCart = create<ProductState>((set) => ({
 		set((state) => ({
 			products: products,
 		})),
+
+	// → Remove product
+
+	removeProduct: (id) => {
+		set((state) => ({
+			products: state.products.filter((product) => {
+				if (product.id === id) return
+				return product
+			}),
+		}))
+	},
 }))
 
 export default useStoreCart

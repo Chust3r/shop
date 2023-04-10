@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 
-// → Project Imports 
+// → Project Imports
+
 import CartIcon from '../icons/cartIcon'
+import CardIcon from '../icons/cardIcon';
 
 // →Interfaces 
 
@@ -12,6 +14,7 @@ import { Product } from '@/types/types';
 // → Store 
 
 import useStoreCart from '@/store/storeCart'
+
 
 
 const addCart = ({ product }: { product: Product }) => {
@@ -45,6 +48,7 @@ const addCart = ({ product }: { product: Product }) => {
                     </>
                     :
                     <>
+                        <CardIcon className='w-4 h-4 stroke-2' />
                         <span>Pagar ahora</span>
                     </>
 

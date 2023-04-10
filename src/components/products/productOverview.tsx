@@ -11,7 +11,6 @@ import { Product } from '@/types/types'
 
 const ProductOverview = ({ product }: { product: Product }) => {
 
-	console.log(product)
 
 	const { category, description, image, price, title } = product
 
