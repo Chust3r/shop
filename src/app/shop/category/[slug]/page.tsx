@@ -9,14 +9,12 @@ import { APIResponseProducts } from "@/types/types"
 import process from "process"
 
 interface PageProps {
-    searchParams: {
-        category: string
+    params: {
+        slug: string
     }
 }
 
-
 // → Data fetching
-
 
 const getData = async (category: string): Promise<APIResponseProducts> => {
 
@@ -31,15 +29,14 @@ const getData = async (category: string): Promise<APIResponseProducts> => {
 
 }
 
-const page = async ({ searchParams }: PageProps): Promise<JSX.Element> => {
+const page = async ({ params }: PageProps): Promise<JSX.Element> => {
 
-
-    const data = await getData(searchParams.category)
+    const data = await getData(params.slug)
 
     return (
         <>
-            <Search searchParams={searchParams} />
-            <ProductList products={data.data} /></>
+            <ProductList products={data.data} />
+        </>
     )
 }
 
