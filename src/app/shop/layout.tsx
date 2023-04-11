@@ -1,5 +1,6 @@
 import NavbarCart from '@/components/navbar/navbarCart'
-import Breadcrumbs from '../../components/ui/breadcrumbs';
+import Transition from '../../components/ui/transition';
+
 
 const shopLayout = ({
 	children,
@@ -9,10 +10,12 @@ const shopLayout = ({
 	return (
 		<>
 			<NavbarCart />
-			{/* <Breadcrumbs/> */}
-			<section >
+
+			<Transition>
+				<section >
 				{children}
 			</section>
+			</Transition>
 		</>
 	)
 }

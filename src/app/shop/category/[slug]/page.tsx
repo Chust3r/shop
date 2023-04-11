@@ -33,8 +33,11 @@ const page = async ({ params }: PageProps): Promise<JSX.Element> => {
 
     const data = await getData(params.slug)
 
+
+
     return (
         <>
+            <Search path={params.slug} />
             <ProductList products={data.data} />
         </>
     )

@@ -25,7 +25,6 @@ const getProduct = async (id: number): Promise<APIResponseProduct> => {
 }
 
 
-
 const productPage = async ({ params: { slug } }: PageProps): Promise<JSX.Element> => {
 
     const { data } = await getProduct(slug)

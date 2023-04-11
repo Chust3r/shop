@@ -15,7 +15,7 @@ const ProductOverview = ({ product }: { product: Product }) => {
 	const { category, description, image, price, title } = product
 
 
-	return <div className="max-h-max flex flex-col md:grid md:grid-cols-2 text-contrast">
+	return <div className="max-h-max flex flex-col lg:grid md:grid-cols-2 text-contrast">
 
 		{/* Slider */}
 

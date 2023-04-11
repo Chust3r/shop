@@ -5,13 +5,14 @@ interface Categories {
 	path: string
 }
 
+
 const categories: Array<Categories> = [
 	{
-		name: 'Ropa de hombre',
+		name: 'Hombre',
 		path: "men's clothing",
 	},
 	{
-		name: 'Ropa de mujer',
+		name: 'Mujer',
 		path: "women's clothing",
 	},
 	{
@@ -19,7 +20,7 @@ const categories: Array<Categories> = [
 		path: 'jewelery',
 	},
 	{
-		name: 'Electronicos',
+		name: 'Electrónicos',
 		path: 'electronics',
 	},
 ]
