@@ -22,15 +22,15 @@ const Slider: React.FC<SliderProps> = ({ children, controls: { pagination = fals
 	// Config Slider
 
 	const options: Options = {
-			autoplay: true,
-			type: type,
-			rewind: Elements.length > 1,
-			rewindSpeed: 300,
-			arrows: Elements.length === 1 ? false : arrows,
-			pagination: pagination,
-			lazyLoad: true,
-			perMove: 1,
-			speed: 1200
+		autoplay: true,
+		type: type,
+		rewind: Elements.length > 1,
+		rewindSpeed: 300,
+		arrows: Elements.length === 1 ? false : arrows,
+		pagination: pagination,
+		lazyLoad: true,
+		perMove: 1,
+		speed: 1200
 	}
 
 	return (

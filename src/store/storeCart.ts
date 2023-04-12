@@ -9,6 +9,8 @@ interface ProductState {
 	addProduct: (product: Product) => void
 	refreshProducts: (products: Array<ProductCart>) => void
 	removeProduct: (id: number) => void
+	add: (id: number) => void
+	remove: (id: number) => void
 }
 
 const useStoreCart = create<ProductState>((set) => ({
@@ -19,25 +21,17 @@ const useStoreCart = create<ProductState>((set) => ({
 
 	addProduct: (product) =>
 		set((state) => {
-			let newStore = []
+			let newStore: Array<ProductCart> = []
 			// Agregar el nuevo producto al Store
 
 			const exist = state.products.some((item) => item.id === product.id)
 
 			// Si existe aumentamos en 1 la cantidad
 
-			if (exist) {
-				newStore = state.products.map((item) => {
-					if (item.id === product.id) {
-						return {
-							...item,
-							amount: item.amount + 1,
-						}
-					}
-					return item
-				})
-			} else {
+			if (!exist) {
 				newStore = [...state.products, { ...product, amount: 1 }]
+			} else {
+				newStore = state.products
 			}
 
 			return { products: newStore }
@@ -56,6 +50,33 @@ const useStoreCart = create<ProductState>((set) => ({
 		set((state) => ({
 			products: state.products.filter((product) => {
 				if (product.id === id) return
+				return product
+			}),
+		}))
+	},
+
+	// → Add more quantities
+
+	add: (id) => {
+		set((state) => ({
+			products: state.products.map((product) => {
+				if (product.id === id)
+					return { ...product, amount: product.amount + 1 }
+				return product
+			}),
+		}))
+	},
+
+	// → Remove
+
+	remove: (id) => {
+		set((state) => ({
+			products: state.products.map((product) => {
+				if (product.id === id)
+					return {
+						...product,
+						amount: product.amount - 1 === 0 ? 1 : product.amount - 1,
+					}
 				return product
 			}),
 		}))

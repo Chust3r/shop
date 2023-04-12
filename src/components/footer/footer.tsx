@@ -6,7 +6,7 @@ import YoutubeIcon from '../icons/youtubeIcon'
 
 const Footer = () => {
 	return (
-		<footer aria-label="Site Footer" className="w-full bg-white ">
+		<footer aria-label="Site Footer" className="w-full bg-white border-t-[1px]">
 			<div className="container mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 text-slate-700">
 				<div className="mx-auto max-w-md">
 					<strong className="block text-center text-xl font-bold sm:text-3xl">

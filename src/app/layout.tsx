@@ -1,4 +1,3 @@
-import Footer from '@/components/footer/footer'
 import './globals.css'
 
 
@@ -11,17 +10,25 @@ export const metadata = {
 
 interface PageProps {
 	children: React.ReactNode
-	params: string
 }
 
-export default function RootLayout(props: PageProps): JSX.Element {
+
+// → Custom font
+
+import localFont from "next/font/local"
+
+const myFont = localFont({ src: "../../public/Naula.otf", variable: "--custom-font" })
+
+
+
+
+export default function RootLayout({ children }: PageProps): JSX.Element {
 
 	return (
 		<html lang="en">
 
-			<body className="flex flex-col min-h-screen bg-white divide-y-[1px] divide-complementary container mx-auto gap-2">
-				<main className="flex-1">{props.children}</main>
-				<Footer />
+			<body className={`bg-relive ${myFont.variable}`}>
+				{children}
 			</body>
 
 		</html>

@@ -1,5 +1,7 @@
-// → Project imports 
+// → Project imports
+
 import CardCart from '../card/cardCart';
+import Checkout from '../cart/checkout';
 
 
 // → Interfaces
@@ -7,20 +9,20 @@ import CardCart from '../card/cardCart';
 import { ProductCart } from '@/types/types'
 
 
-
 const productsCart = ({ products }: { products: Array<ProductCart> }) => {
     return (
 
-        <div className='min-h-[24rem]'>
-            <div className='flex justify-between mb-8'>
-
-                <p className='text-2xl font-medium text-contrast'>Tú carrito</p>
-                <p className='text-sm font-medium text-contrast/90'>{products.length} productos en el carrito</p>
-
+        <div className='min-h-[24rem] flex flex-col'>
+            <div className=' divide-y-[1px]'>
+                <div className='flex justify-between'>
+                    <h2 className='text-2xl font-medium text-contrast'>Tu carrito</h2>
+                    <p className='text-sm font-semibold text-contrast/80'>{products.length} productos en tu carrito</p>
+                </div>
+                <>
+                    {products.map(item => <CardCart {...item} key={item.id} />)}
+                </>
             </div>
-
-            {products.map(product => <CardCart {...product} key={product.title} />)}
-
+            <Checkout />
         </div>
 
     )
