@@ -29,8 +29,9 @@ const transition = (props: PageProps) => {
                 }}
 
                 transition={{
-                    duration: .4,
-                    delay: .3
+                    duration: .5,
+                    delay: .3,
+                    ease: "easeIn"
                 }}
 
                 exit={{

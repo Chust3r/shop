@@ -30,9 +30,11 @@ const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
 
     const [_, updateStorage] = useStorage("products", products)
 
+
     useEffect(() => {
         updateStorage(products)
     }, [amount])
+    
 
     return (
         <div className='flex flex-col lg:grid lg:grid-cols-2 overflow-hidden my-4 px-2 text-contrast pt-3 gap-3'>
