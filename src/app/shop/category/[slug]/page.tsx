@@ -1,6 +1,6 @@
 // → Project Imports
 
-import ProductList from "@/components/products/productList"
+import ProductList from "@/components/products/list"
 import Search from "@/components/search/search"
 
 // → Interfaces

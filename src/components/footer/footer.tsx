@@ -1,8 +1,6 @@
-import FacebookIcon from '../icons/facebookIcon'
-import HearthIcon from '../icons/hearthIcon'
-import InstagramIcon from '../icons/instagramIcon'
-import TwitterIcon from '../icons/twitterIcon'
-import YoutubeIcon from '../icons/youtubeIcon'
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa"
+import { HiHeart } from "react-icons/hi2"
+
 
 const Footer = () => {
 	return (
@@ -19,29 +17,26 @@ const Footer = () => {
 								className="w-full rounded-full bg-complementary p-4 pr-32 text-sm font-medium transition focus:outline-primary"
 								placeholder="micorreo@example.com"
 							/>
-
-							<button className="absolute top-1/2 right-1 -translate-y-1/2 rounded-full  px-5 py-3 text-sm font-medium text-acent bg-gradient-to-r from-primary to-secondary">
+							<button className="absolute top-1/2 right-1 -translate-y-1/2  text-sm font-medium text-acent btn">
 								Notifícame
 							</button>
 						</div>
 					</form>
 				</div>
-
 				<div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
 					<div className="mx-auto max-w-sm lg:max-w-none">
-						<p className="mt-4 text-gray-500 lg:text-left lg:text-lg text-justify">
+						<p className="mt-4 text-contrast lg:text-left lg:text-lg text-justify">
 							Todos nuestros productos son bordados a mano y acabados en
 							piel con la iconografía representativa de la comunidad
 							mazahua del Municipio de Villa Victoria, Estado México y
 							cada uno de los íconos plasmados, representa un poco de su
 							legado cultural.
 						</p>
-
 						<div className="mt-6 flex justify-center gap-4 lg:justify-start">
-							<FacebookIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
-							<InstagramIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
-							<TwitterIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
-							<YoutubeIcon className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<FaFacebook className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<FaInstagram className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<FaTwitter className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
+							<FaYoutube className="w-6 h-6 text-contrast transition hover:text-primary cursor-pointer" />
 						</div>
 					</div>
 
@@ -158,7 +153,7 @@ const Footer = () => {
 						<br />
 						<p className="flex items-center justify-center gap-2">
 							<span>Made with</span>
-							<HearthIcon className="w-3 h-3 fill-rose-400 stroke-rose-400" />
+							<HiHeart className="w-3 h-3 fill-rose-400 stroke-rose-400" />
 							<span>by Chust3r</span>
 						</p>
 					</div>

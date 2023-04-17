@@ -1,6 +1,6 @@
 // → Project imports
 
-import ProductOverview from '@/components/products/productOverview';
+import ProductOverview from '@/components/products/overview';
 
 //→ Interfaces
 

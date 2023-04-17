@@ -4,7 +4,7 @@
 
 import useStoreCart from "@/store/storeCart"
 
-const checkout = () => {
+const Checkout = () => {
 
 
     const products = useStoreCart(state => state.products)
@@ -20,8 +20,9 @@ const checkout = () => {
 
 
     return (
-        <div className='flex justify-end mt-5'>
-            <div className='flex flex-col divide-y-[1px] w-full lg:w-1/2 p-5 bg-white rounded text-contrast shadow'>
+
+        <div className="flex flex-col">
+            <div className='flex flex-col divide-y-[1px] p-5 rounded text-contrast shadow'>
                 {/* Subtotal */}
                 <div className='flex justify-between pt-5'>
                     <p className="">Subtotal</p>
@@ -38,8 +39,12 @@ const checkout = () => {
                     <p className='font-semibold'>${total.toFixed(2)}</p>
                 </div>
             </div>
+            <div className="flex justify-center mt-5">
+                <button className="btn ">Pagar ahora</button>
+            </div>
         </div>
+
     )
 }
 
-export default checkout
+export default Checkout

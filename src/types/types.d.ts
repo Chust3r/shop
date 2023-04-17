@@ -12,11 +12,6 @@ interface APIResponseProducts {
 	data: Array<Product>
 }
 
-interface IconProps {
-	className: string
-}
-
-
 
 interface APIResponseProduct {
 	data: Product
@@ -27,4 +22,4 @@ interface ProductCart extends Product {
 	amount: number
 }
 
-export { Product, IconProps, APIResponseProduct, APIResponseProducts,ProductCart }
+export { Product, APIResponseProduct, APIResponseProducts, ProductCart }

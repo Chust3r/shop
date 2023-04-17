@@ -1,6 +1,6 @@
 
 
-const cartVoid = () => {
+const WithoutProducts = () => {
     return (
         <section className="w-full h-96 all-center">
             <h1 className="text-2xl">There aren't products here!!</h1>
@@ -8,4 +8,4 @@ const cartVoid = () => {
     )
 }
 
-export default cartVoid
+export default WithoutProducts

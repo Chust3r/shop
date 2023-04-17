@@ -4,48 +4,37 @@ import { motion, AnimatePresence, delay } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 
-// → Interfaces
 
-interface PageProps {
-    children: React.ReactNode
-}
-
-const transition = (props: PageProps) => {
+const transition = () => {
 
     const pathName = usePathname()
+
+
+    console.log(pathName)
 
 
     return (
         <AnimatePresence key={pathName} onExitComplete={() => window.scrollTo(0, 0)}>
 
-            <motion.section
-
+            <motion.div className='fixed top-0 bottom-0 w-screen h-screen right-full z-30 bg-acent'
                 initial={{
-                    opacity: 0,
+                    x: "100%",
+                    width: "100%"
                 }}
-
                 animate={{
-                    opacity: 1,
+                    x: "0%",
+                    width: "0"
                 }}
 
                 transition={{
-                    duration: .5,
-                    delay: .3,
-                    ease: "easeIn"
+                    duration: 0.8,
+                    ease: "easeInOut",
                 }}
 
-                exit={{
-                    opacity: 0
-                }}
-
-
-
-
-            >
-                {props.children}
-            </motion.section>
+            />
         </AnimatePresence>
     )
 }
 
 export default transition
+

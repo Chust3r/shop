@@ -9,8 +9,8 @@ module.exports = {
 
 	theme: {
 		colors: {
-			primary: '#2563eb',
-			secondary: '#4338ca',
+			primary: '#3b82f6',
+			secondary: '#6366f1',
 			contrast: '#374151',
 			complementary: '#f3f4f6',
 			acent: colors.white,
@@ -18,7 +18,7 @@ module.exports = {
 			...colors,
 		},
 		fontFamily: {
-			sans: "'Maven Pro', sans-serif",
+			sans: "'Nunito', sans-serif",
 			custom: 'var(--custom-font)',
 		},
 	},

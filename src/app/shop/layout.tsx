@@ -11,11 +11,10 @@ interface PageProps {
 const shopLayout = ({ children }: PageProps): JSX.Element => {
 	return (
 		<>
+			<Transition />
 			<NavbarCart />
-			<main className='container mx-auto pb-2'>
-				<Transition>
-					{children}
-				</Transition>
+			<main className='container mx-auto pb-3'>
+				{children}
 			</main>
 			<Footer />
 		</>

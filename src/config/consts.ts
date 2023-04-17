@@ -1,10 +1,11 @@
+import { HiOutlineShoppingBag, HiOutlineTrash } from 'react-icons/hi2'
+
 // → Interfaces
 
 interface Categories {
 	name: string
 	path: string
 }
-
 
 const categories: Array<Categories> = [
 	{
@@ -25,4 +26,9 @@ const categories: Array<Categories> = [
 	},
 ]
 
-export { categories }
+const icons = {
+	ShoppingCart: HiOutlineShoppingBag,
+	Delete:HiOutlineTrash
+}
+
+export { categories,icons }

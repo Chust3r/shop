@@ -19,12 +19,14 @@ const ProductOverview = ({ product }: { product: Product }) => {
 
 		{/* Slider */}
 
-		<section className='all-center'> 
+		<section className='all-center'>
 			<Slider controls={{
-				arrows: true, 
+				arrows: true,
 				pagination: false
 			}}
 				autoplay={false}
+				type="slide"
+
 			>
 				<div className='w-full p-5'>
 					<figure className='h-72 md:h-96 relative'>

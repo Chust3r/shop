@@ -6,7 +6,8 @@ import { useEffect } from 'react';
 
 // → Project Imports
 
-import DeleteIcon from '../icons/deleteIcon';
+import { icons } from '@/config/consts';
+
 
 // → Interfaces
 
@@ -23,7 +24,8 @@ import useStorage from '@/hooks/useStorage';
 
 
 
-const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
+
+const CardCart = ({ title, image, price, amount, id }: ProductCart) => {
 
 
     const { removeProduct, add, remove, products } = useStoreCart(state => state)
@@ -34,12 +36,10 @@ const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
     useEffect(() => {
         updateStorage(products)
     }, [amount])
-    
+
 
     return (
         <div className='flex flex-col lg:grid lg:grid-cols-2 overflow-hidden my-4 px-2 text-contrast pt-3 gap-3'>
-
-            {/* Image and description  */}
             <div className="flex flex-col lg:flex-row gap-4 items-center">
                 <figure className=' w-28 h-28 md:w-20 md:h-20 relative rounded bg-complementary'>
                     <Link href={`shop/products/${id}`}>
@@ -48,7 +48,7 @@ const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
                 <h3 className='font-medium text-contrast/90 flex-1 text-sm md:text-base truncate'>{title}</h3>
             </div>
 
-            {/* More info */}
+
 
             <div className='flex items-center justify-between gap-3'>
                 {/* Controls */}
@@ -57,13 +57,10 @@ const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
                     <span className='w-10 text-center bg-complementary p-1 rounded'>{amount}</span>
                     <button className='w-7' onClick={() => add(id)}>+</button>
                 </div>
-
-                {/* Price */}
-
                 <span className='font-medium'>${(price * amount).toFixed(2)}</span>
                 <div>
                     <div onClick={() => removeProduct(id)}>
-                        <DeleteIcon className='w-5 h-5 cursor-pointer hover:stroke-red-500 transition duration-200' />
+                        <icons.Delete className='w-5 h-5 cursor-pointer hover:stroke-red-500 transition duration-200' />
                     </div>
                 </div>
             </div>
@@ -72,4 +69,4 @@ const cardCart = ({ title, image, price, amount, id }: ProductCart) => {
     )
 }
 
-export default cardCart
+export default CardCart

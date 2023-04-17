@@ -14,22 +14,22 @@ interface SliderProps {
 	}
 	type?: "slide" | "loop" | "fade"
 	children: React.ReactNode
+	rewind?: boolean
 }
 
-const Slider: React.FC<SliderProps> = ({ children, controls: { pagination = false, arrows = false }, type = "slide" }) => {
+const Slider: React.FC<SliderProps> = ({ children, controls: { pagination = false, arrows = false }, type = "slide", autoplay, rewind = false }) => {
 	const Elements = Children.toArray(children)
 
 	// Config Slider
 
 	const options: Options = {
-		autoplay: true,
+		autoplay,
 		type: type,
-		rewind: Elements.length > 1,
+		rewind,
 		rewindSpeed: 300,
 		arrows: Elements.length === 1 ? false : arrows,
 		pagination: pagination,
 		lazyLoad: true,
-		perMove: 1,
 		speed: 1200
 	}
 

@@ -1,11 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-
-// → Project Imports
-
-import CartIcon from '../icons/cartIcon'
-import CardIcon from '../icons/cardIcon';
+import { icons } from "@/config/consts"
 
 // →Interfaces 
 
@@ -35,20 +31,20 @@ const addCart = ({ product }: { product: Product }) => {
 
     return (
         <>
-            <button className='bg-gradient-to-r from-primary to-secondary font-medium text-sm text-acent py-3 px-5 rounded-full flex all-center gap-3 self-center my-2'
+            <button className='btn font-medium text-sm flex all-center gap-3 self-center my-2'
                 onClick={onClick}
             >
                 {!isInCart
                     ?
                     <> 
                         <span>
-                    <CartIcon className='w-4 h-4 stroke-2' />
+                            <icons.ShoppingCart className='w-4 h-4 stroke-2' />
                         </span>
                         <span>Agregar al carrito</span>
                     </>
                     :
                     <>
-                        <CardIcon className='w-4 h-4 stroke-2' />
+
                         <span>Pagar ahora</span>
                     </>
 

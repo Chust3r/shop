@@ -3,17 +3,17 @@
 
 // → Project imports
 
-import CartVoid from "./cartVoid"
+import CartVoid from "./withoutProducts"
 
 // → Store
 
 import useStoreCart from "@/store/storeCart"
-import ProductsCart from "../products/productsCart"
+import ProductsCart from "../products/inCart"
 
 
 
 
-const productsInCart = () => {
+const WithProducts = () => {
 
     const products = useStoreCart(state => state.products)
 
@@ -25,5 +25,5 @@ const productsInCart = () => {
 
 }
 
-export default productsInCart
+export default WithProducts
 
