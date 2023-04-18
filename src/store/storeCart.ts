@@ -7,7 +7,7 @@ import { Product, ProductCart } from '@/types/types'
 interface ProductState {
 	products: Array<ProductCart>
 	addProduct: (product: Product) => void
-	refreshProducts: (products: Array<ProductCart>) => void
+	refreshProducts: () => void
 	removeProduct: (id: number) => void
 	add: (id: number) => void
 	remove: (id: number) => void
@@ -39,9 +39,9 @@ const useStoreCart = create<ProductState>((set) => ({
 
 	// → Refresh all products
 
-	refreshProducts: (products) =>
+	refreshProducts: () =>
 		set((state) => ({
-			products: products,
+			products: [],
 		})),
 
 	// → Remove product

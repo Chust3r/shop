@@ -9,10 +9,6 @@ const transition = () => {
 
     const pathName = usePathname()
 
-
-    console.log(pathName)
-
-
     return (
         <AnimatePresence key={pathName} onExitComplete={() => window.scrollTo(0, 0)}>
 

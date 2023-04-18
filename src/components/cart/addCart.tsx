@@ -10,6 +10,7 @@ import { Product } from '@/types/types';
 // → Store 
 
 import useStoreCart from '@/store/storeCart'
+import Link from 'next/link';
 
 
 
@@ -44,8 +45,7 @@ const addCart = ({ product }: { product: Product }) => {
                     </>
                     :
                     <>
-
-                        <span>Pagar ahora</span>
+                        <Link href="shop/cart"><span>Pagar ahora</span></Link>
                     </>
 
                 }

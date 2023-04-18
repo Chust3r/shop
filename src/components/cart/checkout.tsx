@@ -1,13 +1,22 @@
 "use client"
 
+import Confetti from "react-confetti"
+
 // → Store 
 
 import useStoreCart from "@/store/storeCart"
+import { useWindowSize } from "usehooks-ts"
+import { useState } from "react"
 
 const Checkout = () => {
 
 
-    const products = useStoreCart(state => state.products)
+    const { products, refreshProducts } = useStoreCart(state => state)
+
+    const { height, width } = useWindowSize()
+
+
+    const [isPaid, setIsPaid] = useState<boolean>(false)
 
 
     let total = 0
@@ -18,9 +27,18 @@ const Checkout = () => {
     }
 
 
+    const handleClick = () => {
+        setIsPaid(true)
+        setTimeout(() => {
+            refreshProducts()
+        }, 5000)
+    }
+
+
 
     return (
 
+        <>
         <div className="flex flex-col">
             <div className='flex flex-col divide-y-[1px] p-5 rounded text-contrast shadow'>
                 {/* Subtotal */}
@@ -40,9 +58,14 @@ const Checkout = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-5">
-                <button className="btn ">Pagar ahora</button>
+                    <button className="btn" onClick={handleClick}>Pagar ahora</button>
             </div>
         </div>
+
+
+            {isPaid && <Confetti width={width - 150} height={height} />}
+
+        </>
 
     )
 }
