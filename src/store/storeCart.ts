@@ -7,10 +7,11 @@ import { Product, ProductCart } from '@/types/types'
 interface ProductState {
 	products: Array<ProductCart>
 	addProduct: (product: Product) => void
-	refreshProducts: () => void
+	refreshProducts: (products: Array<ProductCart>) => void
 	removeProduct: (id: number) => void
 	add: (id: number) => void
 	remove: (id: number) => void
+	reset: () => void
 }
 
 const useStoreCart = create<ProductState>((set) => ({
@@ -39,9 +40,9 @@ const useStoreCart = create<ProductState>((set) => ({
 
 	// → Refresh all products
 
-	refreshProducts: () =>
+	refreshProducts: (products) =>
 		set((state) => ({
-			products: [],
+			products: products,
 		})),
 
 	// → Remove product
@@ -79,6 +80,14 @@ const useStoreCart = create<ProductState>((set) => ({
 					}
 				return product
 			}),
+		}))
+	},
+
+	// → Reset
+
+	reset: () => {
+		set(() => ({
+			products: [],
 		}))
 	},
 }))

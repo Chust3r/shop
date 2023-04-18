@@ -11,7 +11,7 @@ import { useState } from "react"
 const Checkout = () => {
 
 
-    const { products, refreshProducts } = useStoreCart(state => state)
+    const { products, reset } = useStoreCart(state => state)
 
     const { height, width } = useWindowSize()
 
@@ -30,7 +30,7 @@ const Checkout = () => {
     const handleClick = () => {
         setIsPaid(true)
         setTimeout(() => {
-            refreshProducts()
+            reset()
         }, 5000)
     }
 
